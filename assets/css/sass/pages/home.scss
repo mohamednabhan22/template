@@ -1,0 +1,397 @@
+body{
+    width:100%;
+    overflow-x: hidden
+}.slide_show{
+    background-image:url(../images/banner-img.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height:850px;
+    align-items: center;
+    @media(max-width:983px){
+        height:650px;
+    }
+    .content{
+        //background-color:rgba($color: #333,$alpha:0.4);
+        background-image:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8), black);
+        background-image:linear-gradient(top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8), black);
+        //background-image: linear-gradient(black,white);
+        width:100%;
+        height: 100%;
+        padding-top:18%;
+        h1{
+            font-weight: bold;
+            text-shadow: 1px 1px 1px black;
+            @media(max-width:983px){
+                font-size: 38px;
+            }
+        }
+        @media(max-width:983px){
+            .main_btn {
+                margin: 32px auto;
+            }
+        }
+    }
+}
+
+// Start Section about_me
+.about_me{
+        background-color:$mainColor;
+        .main_img{
+            overflow:hidden;
+            img{
+                border-radius: 29px 0 0 29px;
+                height: 450px;
+                @media(max-width:767px){
+                    border-radius: 0;
+                }
+            }
+        }
+        @media(max-width:767px){
+            .container .main_img{
+                padding:0;
+                img{
+                    height: 284px;
+                    width: 100%;
+                }
+            }
+        }
+        .about{
+            background-color: white;
+            height: 450px;
+            padding: 80px 30px;
+            border-radius: 0 29px 29px 0;
+            @media(max-width:767px){
+                border-radius: 0;
+            }
+            h2{
+                font-size: 29px;
+                font-weight: bold;
+                color: #333;
+                margin-bottom: 0;
+            }
+            span{
+                color: #afaeae;
+                font-size: 18px;
+            }
+            .borer_bottom{
+                margin-top: 19px;
+            }
+            p{
+                color: #979494;
+                font-size: 18px;
+                line-height: 21px;
+                margin: 20px 0;
+            }
+            .main_btn{
+                margin:20px auto;
+                background-color: #e90e65;
+                &:hover{
+                    background-color:white;
+                    color: $mainColor;
+                    border:2px solid $mainColor
+                }
+            }
+        }
+
+}
+//End Section about_me
+
+// Start Section section_activity
+.section_activity{
+    background-color: $secondColor;
+    .borer_bottom{
+        margin: 1px auto;
+        margin-bottom:30px;
+        width:100px;
+    }
+    .box{
+        margin-top:50px;
+        width:100%;
+        height: 475px;
+        background-size: 100% 100%;
+        background-repeat:no-repeat;
+        border-radius: 20px;
+        box-shadow: 7px 7px 14px silver;
+        @extend %main_transition;
+        &:hover{
+            .content_box{
+                background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(233, 14, 101, 0.95));
+            }
+        }
+        .content_box{
+            color: white;
+            height: 100%;
+            background-color: #e90e6580;
+            padding: 10px 20px;
+            padding-top: 200px;
+            overflow: hidden;
+            border-radius: 20px;
+            @extend %main_transition;
+            &:hover{
+                p{
+                    top:0
+                }
+            }
+            p{
+                position: relative;
+                top:300px;
+                @extend %slow_transition;
+                font-size: 24px;
+                font-weight: bold;
+                color: #f3e7e8;
+                
+            }
+        }
+    }
+    .img_box_num_1{
+        background-image: url(../images/activity-img1.png);
+        
+    }
+    .img_box_num_2{
+        background-image: url(../images/activity-img2.png);
+        
+    }
+    .img_box_num_3{
+        background-image: url(../images/activity-img3.png);
+        
+    }
+   
+}
+//End Section section_activity
+
+// Start Section recent_works
+.recent_works{
+    //background-color: $mainColor;
+    .borer_bottom{
+        margin: 1px auto;
+        margin-bottom:30px;
+        width:100px;
+    }
+    .box{
+        margin-top:50px;
+        width:100%;
+        height: 263px;
+        background-size: cover;
+        background-repeat:no-repeat;
+        border-radius: 10px;
+        box-shadow: 7px 7px 14px silver;
+        @extend %main_transition;
+        overflow: hidden;
+        &:hover{
+            .content_box{
+                @extend %main_transition;
+                background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(233, 14, 101, 0.95));
+            }
+        }
+        .content_box{
+            color: white;
+            height: 100%;
+            padding: 10px 20px;
+            padding-top: 200px;
+            border-radius: 10px;
+            @extend %main_transition;
+            &:hover{
+                p{
+                    top:-100px
+                }
+                svg{
+                    color:$mainColor;
+                }
+            }
+            p{
+                position: relative;
+                top:70px;
+                @extend %main_transition;
+                font-size: 24px;
+                font-weight: bold;
+                color: #f3e7e8;
+                
+            }
+            span,svg{
+                position: relative;
+                top: auto;
+                bottom: 278px;
+                transition: all 0.4s ease-in-out;
+                font-size: 21px;
+                font-weight: bold;
+                color: #f3e7e8;
+            }
+            svg{
+                right: -79px;
+                color: #e90e6559;
+                @media(max-width:767px){
+                    display: none;
+                }
+            }
+        }
+    }
+    .img_box_num_1{
+        background-image: url(../images/resent_work1.jpg);
+        
+    }
+    .img_box_num_2{
+        background-image: url(../images/resent_work2.jpg);
+        
+    }
+    .img_box_num_3{
+        background-image: url(../images/resent_work3.jpg);
+        
+    }
+    .img_box_num_4{
+        background-image: url(../images/resent_work4.jpg);
+        
+    }
+    .img_box_num_5{
+        background-image: url(../images/resent_work5.jpg);
+        
+    }
+    .img_box_num_6{
+        background-image: url(../images/resent_work6.jpg);
+        
+    }
+   
+}
+//End Section recent_works
+
+// Start Section testimonials
+.testimonials{
+    background-color: $secondColor;
+    
+    .borer_bottom{
+        margin:1px auto;
+        width:100px;
+    }
+    @media(max-width:767px){
+        padding-bottom: 2px;
+        h2{
+            font-size: 43px;
+        }
+    }
+    .carousel {
+        margin: 100px 0;
+        .carousel-caption {
+            position: static;
+            margin-top: -22px;
+            p{
+                color: #333;
+                font-size: 19px;
+                margin-bottom: 100px;
+                @media(max-width:600px){
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .carousel-indicators{
+        li{
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+            width: 69px;
+            height: 68px;
+            top: 40px;
+            @media(max-width:600px){
+                width: 50px;
+                height: 50px;
+                top: 6px;
+            }
+            img{
+                position: absolute;
+                width: 100px;
+                height: 69px;
+            }
+        }
+    }
+}
+//End Section testimonials
+// Start Section section_portfolios
+.section_portfolios{
+    //background-color: $mainColor;
+    .borer_bottom{
+        margin: 1px auto;
+        margin-bottom:30px;
+        width:100px;
+    }
+    .box{
+        margin-top:50px;
+        width:100%;
+        height: 263px;
+        background-size: cover;
+        background-repeat:no-repeat;
+        border-radius: 10px;
+        box-shadow: 7px 7px 14px silver;
+        @extend %main_transition;
+        overflow: hidden;
+        opacity:.7;
+        &:hover{
+            opacity:1;
+            .content_box{
+                @extend %main_transition;
+                background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(233, 14, 101, 0.95));
+            }
+        }
+        .content_box{
+            color: white;
+            height: 100%;
+            padding: 10px 20px;
+            padding-top: 200px;
+            border-radius: 10px;
+            @extend %main_transition;
+            &:hover{
+                svg{
+                    color:$mainColor;
+                }
+            }
+            span,svg{
+                transition: all 0.4s ease-in-out;
+                font-size: 16px;
+                font-weight: bold;
+                color: #f3e7e8;
+            }
+            svg{
+                position: absolute;
+                right: 33px;
+                top: 72px;
+                color: #e90e65bd;
+            }
+        }
+    }
+    .img_box_num_1{
+        background-image: url(../images/portfolios1.jpg);
+        
+    }
+    .img_box_num_2{
+        background-image: url(../images/portfolios2.jpg);
+        
+    }
+    .img_box_num_3{
+        background-image: url(../images/portfolios3.jpg);
+        
+    }
+    .img_box_num_4{
+        background-image: url(../images/portfolios4.jpg);
+        
+    }
+    .img_box_num_5{
+        background-image: url(../images/portfolios5.jpg);
+        
+    }
+    .img_box_num_6{
+        background-image: url(../images/portfolios6.jpg);
+        
+    }
+    .img_box_num_7{
+        background-image: url(../images/portfolios7.jpg);
+        
+    }
+    .img_box_num_8{
+        background-image: url(../images/portfolios8.jpg);
+        
+    }
+    .img_box_num_9{
+        background-image: url(../images/portfolios9.jpg);
+        
+    }
+   
+}
